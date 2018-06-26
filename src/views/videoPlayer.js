@@ -11,7 +11,7 @@ var VideoPlayerView = Backbone.View.extend({
   // },
 
   render: function() {
-    this.$el.html(this.template());
+    this.$el.html(this.template(this.collection.models[0].attributes)); // this.$('h3').html('Put proper title here'); // this.$('.video-player-details').append();
     return this;
   },
   
