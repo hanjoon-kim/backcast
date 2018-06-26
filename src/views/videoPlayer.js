@@ -1,6 +1,7 @@
 var VideoPlayerView = Backbone.View.extend({
 
-  
+  el: '.player',
+
   initialize: function () {
     this.$('.video-list-entry-title').bind('click', this.render());
   },

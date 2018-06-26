@@ -7,12 +7,12 @@ var VideoListView = Backbone.View.extend({
     //   var entryView = new VideoListEntryView(elem);
     //   $('body').append(entryView.render());
     // });
-    this.collection.on('sync', function() {
-      this.render();
-    }, this);
+    // this.collection.on('sync', function() {
+    //   // this.render();
+    // }, this);
+    
+    this.listenTo(this.collection, 'sync', this.render);
 
-
-    console.log(this.render);
   },
   
   
